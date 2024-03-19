@@ -1,0 +1,110 @@
+@startuml
+class ProductoExtranjero {
+- String nombre
+- String marca
+- String sku
++ <<Create>> ProductoExtranjero(String,String,String)
++ String getNombre()
++ void setNombre(String)
++ String getMarca()
++ void setMarca(String)
++ String getSku()
++ void setSku(String)
++ void insertarProducto(Productos)
+}
+
+
+interface Productos {
+~ String getNombre()
+~ String getMarca()
+~ String getSku()
+~ void insertarProducto(Productos)
+}
+
+class ConexionMySQL {
++ BasesDeDatos conectarBaseDeDatos()
+}
+
+abstract class FactoryProductos {
++ void createProducto(String,String,String)
+- boolean checkMarca(String)
+# {abstract}Productos crearProductoNacional(String,String,String)
+# {abstract}Productos crearProductoExtranjero(String,String,String)
+}
+
+interface BasesDeDatos {
++ void conectar()
++ void desconectar()
++ void insertarProducto(Productos)
+}
+
+class Postgres {
+- Connection connection
+- {static} Postgres instancia
+- <<Create>> Postgres()
++ {static} Postgres getInstancia()
++ void conectar()
++ void desconectar()
++ void insertarProducto(Productos)
+}
+
+
+abstract class Conexion {
++ void crearConexion()
++ void insertarProducto(Productos)
++ {abstract}BasesDeDatos conectarBaseDeDatos()
+}
+
+class Main {
++ {static} void main(String[])
+}
+
+class ConexionPostgres {
++ BasesDeDatos conectarBaseDeDatos()
+}
+
+class MySQL {
+- Connection connection
+- {static} MySQL instancia
+- <<Create>> MySQL()
++ {static} MySQL getInstancia()
++ void conectar()
++ void desconectar()
++ void insertarProducto(Productos)
+}
+
+
+class Prueba {
++ {static} void main(String[])
+}
+
+class ProductoNacional {
+- String nombre
+- String marca
+- String sku
++ <<Create>> ProductoNacional(String,String,String)
++ String getNombre()
++ void setNombre(String)
++ String getMarca()
++ void setMarca(String)
++ String getSku()
++ void setSku(String)
++ void insertarProducto(Productos)
+}
+
+
+class ConcreteFactoryProductos {
+# Productos crearProductoNacional(String,String,String)
+# Productos crearProductoExtranjero(String,String,String)
+}
+
+
+
+Productos <|.. ProductoExtranjero
+Conexion <|-- ConexionMySQL
+BasesDeDatos <|.. Postgres
+Conexion <|-- ConexionPostgres
+BasesDeDatos <|.. MySQL
+Productos <|.. ProductoNacional
+FactoryProductos <|-- ConcreteFactoryProductos
+@enduml
