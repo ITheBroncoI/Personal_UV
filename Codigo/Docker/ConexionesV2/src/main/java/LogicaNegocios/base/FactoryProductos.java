@@ -4,12 +4,12 @@ import java.util.Arrays;
 import java.util.List;
 
 public abstract class FactoryProductos {
-    public void createProducto (String nombre, String marca, String SKU) {
+    public void createProducto (String sku, String nombre, String marca, double precio, int existencias) {
         if (checkMarca(marca)) {
-            Productos productoNacional = crearProductoNacional(nombre, marca, SKU);
+            Productos productoNacional = crearProductoNacional(sku, nombre, marca, precio, existencias);
             productoNacional.insertarProducto(productoNacional);
         } else {
-            Productos productoExtranjero = crearProductoExtranjero(nombre, marca, SKU);
+            Productos productoExtranjero = crearProductoExtranjero(sku, nombre, marca, precio, existencias);
             productoExtranjero.insertarProducto(productoExtranjero);
         }
     }
@@ -19,6 +19,6 @@ public abstract class FactoryProductos {
         return marcasNacionales.contains(marca);
     }
 
-    protected abstract Productos crearProductoNacional(String nombre, String marca, String SKU);
-    protected abstract Productos crearProductoExtranjero(String nombre, String marca, String SKU);
+    protected abstract Productos crearProductoNacional(String sku, String nombre, String marca, double precio, int existencias);
+    protected abstract Productos crearProductoExtranjero(String sku, String nombre, String marca, double precio, int existencias);
 }

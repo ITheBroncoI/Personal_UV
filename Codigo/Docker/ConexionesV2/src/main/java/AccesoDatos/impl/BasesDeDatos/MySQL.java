@@ -61,11 +61,13 @@ public class MySQL implements BasesDeDatos {
 
     @Override
     public void insertarProducto(Productos producto) {
-        String sql = "INSERT INTO productosNacionales (nombre, marca, SKU) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO productosNacionales (SKU, nombre, marca, precio, existencias) VALUES (?, ?, ?, ?, ?)";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
-            pstmt.setString(1, producto.getNombre());
-            pstmt.setString(2, producto.getMarca());
-            pstmt.setString(3, producto.getSku());
+            pstmt.setString(1, producto.getSku());
+            pstmt.setString(2, producto.getNombre());
+            pstmt.setString(3, producto.getMarca());
+            pstmt.setDouble(4, producto.getPrecio());
+            pstmt.setInt(5, producto.getExistencias());
             pstmt.executeUpdate();
             System.out.println("Producto insertado correctamente.");
         } catch (SQLException e) {

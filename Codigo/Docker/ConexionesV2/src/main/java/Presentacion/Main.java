@@ -6,7 +6,6 @@ import LogicaNegocios.impl.FactoryProductos.ConcreteFactoryProductos;
 public class Main {
     public static void main(String[] args) {
         FactoryProductos factoryProductos = new ConcreteFactoryProductos();
-        factoryProductos.createProducto("Pan Blanco", "Bimbo", "SK4000");
-        factoryProductos.createProducto("Galletas", "Oreo", "SL2001");
+        factoryProductos.createProducto("SK1001", "Pan blanco", "Bimbo", 30.0, 15);
     }
 }

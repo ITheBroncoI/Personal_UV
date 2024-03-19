@@ -6,16 +6,22 @@ import LogicaNegocios.base.Productos;
 
 public class ProductoNacional implements Productos {
     // -- ATRIBUTOS --
+    private String sku;
     private String nombre;
     private String marca;
-    private String sku;
+    private double precio;
+    private int existencias;
 
     // -- METODOS --
     // CONSTRUCTORES
-    public ProductoNacional(String nombre, String marca, String sku) {
+
+
+    public ProductoNacional(String sku, String nombre, String marca, double precio, int existencias) {
+        this.sku = sku;
         this.nombre = nombre;
         this.marca = marca;
-        this.sku = sku;
+        this.precio = precio;
+        this.existencias = existencias;
     }
 
     // GET Y SET
@@ -41,6 +47,22 @@ public class ProductoNacional implements Productos {
 
     public void setSku(String sku) {
         this.sku = sku;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public int getExistencias() {
+        return existencias;
+    }
+
+    public void setExistencias(int existencias) {
+        this.existencias = existencias;
     }
 
     @Override

@@ -8,12 +8,12 @@ import LogicaNegocios.impl.Productos.ProductoNacional;
 public class ConcreteFactoryProductos extends FactoryProductos {
 
     @Override
-    protected Productos crearProductoNacional(String nombre, String marca, String SKU) {
-        return new ProductoNacional(nombre, marca, SKU);
+    protected Productos crearProductoNacional(String sku, String nombre, String marca, double precio, int existencias) {
+        return new ProductoNacional(sku, nombre, marca, precio, existencias);
     }
 
     @Override
-    protected Productos crearProductoExtranjero(String nombre, String marca, String SKU) {
-        return new ProductoExtranjero(nombre, marca, SKU);
+    protected Productos crearProductoExtranjero(String sku, String nombre, String marca, double precio, int existencias) {
+        return new ProductoExtranjero(sku, nombre, marca, precio, existencias);
     }
 }
