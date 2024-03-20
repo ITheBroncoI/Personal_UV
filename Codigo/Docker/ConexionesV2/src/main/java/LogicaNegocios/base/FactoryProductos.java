@@ -14,6 +14,14 @@ public abstract class FactoryProductos {
         }
     }
 
+    public Productos crearProductoSQL (String sku, String nombre, String marca, double precio, int existencias) {
+        if (checkMarca(marca)) {
+            return crearProductoNacional(sku, nombre, marca, precio, existencias);
+        } else {
+            return crearProductoExtranjero(sku, nombre, marca, precio, existencias);
+        }
+    }
+
     private boolean checkMarca(String marca) {
         List<String> marcasNacionales = Arrays.asList("Bimbo", "Gamesa", "Corona", "Lala", "Jumex");
         return marcasNacionales.contains(marca);

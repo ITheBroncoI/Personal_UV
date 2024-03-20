@@ -6,7 +6,7 @@ import AccesoDatos.impl.Conexion.ConexionPostgres;
 
 public class Prueba {
     public static void main(String[] args) {
-        Conexion conexionMySQL = new ConexionPostgres();
+        Conexion conexionMySQL = new ConexionMySQL();
         conexionMySQL.crearConexion();
     }
 }

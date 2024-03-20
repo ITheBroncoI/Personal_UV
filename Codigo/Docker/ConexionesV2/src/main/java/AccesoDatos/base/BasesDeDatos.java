@@ -1,9 +1,11 @@
 package AccesoDatos.base;
 
 import LogicaNegocios.base.Productos;
+import java.util.List;
 
 public interface BasesDeDatos {
-    public void conectar();
-    public void desconectar();
-    public void insertarProducto(Productos producto);
+     void conectar();
+     void desconectar();
+     void insertarProducto(Productos producto);
+     List<Productos> obtenerProductos();
 }

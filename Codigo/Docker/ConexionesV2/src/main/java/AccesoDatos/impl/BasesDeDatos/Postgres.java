@@ -1,17 +1,18 @@
 package AccesoDatos.impl.BasesDeDatos;
 
 import AccesoDatos.base.BasesDeDatos;
+import LogicaNegocios.base.FactoryProductos;
 import LogicaNegocios.base.Productos;
+import LogicaNegocios.impl.FactoryProductos.ConcreteFactoryProductos;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class Postgres implements BasesDeDatos {
     // --- ATRIBUTOS ---
     private Connection connection;
     private static Postgres instancia;
+    private final FactoryProductos factoryProductos = new ConcreteFactoryProductos();
 
     // --- METODOS ---
     // CONSTRUCTOR - SINGLETON
@@ -67,5 +68,28 @@ public class Postgres implements BasesDeDatos {
         } catch (SQLException e) {
             System.out.println("Error al insertar producto: " + e.getMessage());
         }
+    }
+
+    @Override
+    public ArrayList<Productos> obtenerProductos() {
+        ArrayList<Productos> productos = new ArrayList<>();
+        String sql = "SELECT nombre, marca, sku FROM productosExtranjeros";
+
+        try (Statement stmt = connection.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            while (rs.next()) {
+                String sku = rs.getString("sku");
+                String nombre = rs.getString("nombre");
+                String marca = rs.getString("marca");
+                double precio = rs.getDouble("precio");
+                int existencia = rs.getInt("existencias");
+                productos.add(factoryProductos.crearProductoSQL(sku, nombre, marca, precio, existencia));
+            }
+            System.out.println("Productos recuperados correctamente.");
+        } catch (SQLException e) {
+            System.out.println("Error al recuperar productos: " + e.getMessage());
+        }
+        return productos;
     }
 }
