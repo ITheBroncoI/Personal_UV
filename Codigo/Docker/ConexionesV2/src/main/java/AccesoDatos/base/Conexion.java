@@ -24,7 +24,6 @@ public abstract class Conexion {
         basesDeDatos.conectar();
         List<Productos> productos = basesDeDatos.obtenerProductos();
         basesDeDatos.desconectar();
-
         return  productos;
     }
 

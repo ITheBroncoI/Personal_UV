@@ -56,7 +56,7 @@ public class Postgres implements BasesDeDatos {
 
     @Override
     public void insertarProducto(Productos producto) {
-        String sql = "INSERT INTO productosNacionales (SKU, nombre, marca, precio, existencias) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO productosextranjeros (SKU, nombre, marca, precio, existencias) VALUES (?, ?, ?, ?, ?)";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
             pstmt.setString(1, producto.getSku());
             pstmt.setString(2, producto.getNombre());
@@ -73,7 +73,7 @@ public class Postgres implements BasesDeDatos {
     @Override
     public ArrayList<Productos> obtenerProductos() {
         ArrayList<Productos> productos = new ArrayList<>();
-        String sql = "SELECT nombre, marca, sku FROM productosExtranjeros";
+        String sql = "SELECT nombre, marca, sku, precio, existencias FROM productosextranjeros";
 
         try (Statement stmt = connection.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {

@@ -31,6 +31,7 @@ public class Main {
                     3) Salir
                     """);
             seleccion = sc.nextInt();
+            sc.nextLine();
             switch (seleccion) {
                 case 1 -> agregarProducto(sc);
                 case 2 -> {

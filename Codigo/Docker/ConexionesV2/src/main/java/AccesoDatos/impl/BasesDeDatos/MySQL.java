@@ -80,7 +80,7 @@ public class MySQL implements BasesDeDatos {
     @Override
     public List<Productos> obtenerProductos() {
         List<Productos> productos = new ArrayList<>();
-        String sql = "SELECT nombre, marca, sku FROM productosNacionales";
+        String sql = "SELECT nombre, marca, sku, precio, existencias FROM productosNacionales";
 
         try (Statement stmt = connection.createStatement();
              ResultSet rs = stmt.executeQuery(sql)) {
