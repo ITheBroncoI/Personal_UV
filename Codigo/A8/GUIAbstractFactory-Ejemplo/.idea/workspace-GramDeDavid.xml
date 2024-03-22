@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f3176d4d-a18b-40bd-86a4-941673916d04" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/base/elementos/IButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/base/elementos/ICheckbox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/impl/concreteProductos/button/MacButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/impl/concreteProductos/button/WinButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/impl/concreteProductos/checkbox/MacCheckbox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/impl/concreteProductos/checkbox/WinCheckbox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/pl.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/AccesoDatos/Prueba.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/AccesoDatos/base/BasesDeDatos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/AccesoDatos/base/Conexion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/AccesoDatos/impl/BasesDeDatos/MySQL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/AccesoDatos/impl/BasesDeDatos/Postgres.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/AccesoDatos/impl/Conexion/ConexionMySQL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/AccesoDatos/impl/Conexion/ConexionPostgres.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/LogicaNegocios/base/FactoryProductos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/LogicaNegocios/base/HelpMarcas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/LogicaNegocios/base/Productos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/LogicaNegocios/impl/FactoryProductos/ConcreteFactoryProductos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/LogicaNegocios/impl/HelpMarcas/HelpMarca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/LogicaNegocios/impl/Productos/ProductoExtranjero.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/LogicaNegocios/impl/Productos/ProductoNacional.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Docker/ConexionesV2/src/main/java/Presentacion/Main.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2e0A1oRMeEGFKHDHc4TJtAoeNCr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/angel/OneDrive/UV/Cuarto semestre/Principios de construcción de software/Codigo/A8/AbstractFactory-Ejemplo&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3176d4d-a18b-40bd-86a4-941673916d04" name="Changes" comment="" />
+      <created>1711030909590</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711030909590</updated>
+    </task>
+    <servers />
+  </component>
+</project>
