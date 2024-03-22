@@ -3,8 +3,8 @@ package impl.concreteFactories;
 import base.elementos.IButton;
 import base.elementos.ICheckbox;
 import base.factories.GUIFactory;
-import impl.concreteProductos.button.WinButton;
-import impl.concreteProductos.checkbox.WinCheckbox;
+import impl.concreteProductos.windows.WinButton;
+import impl.concreteProductos.windows.WinCheckbox;
 
 public class WinFactory implements GUIFactory {
     @Override

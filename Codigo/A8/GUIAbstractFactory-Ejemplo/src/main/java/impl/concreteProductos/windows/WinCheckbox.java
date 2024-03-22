@@ -1,4 +1,4 @@
-package impl.concreteProductos.checkbox;
+package impl.concreteProductos.windows;
 
 import base.elementos.ICheckbox;
 
